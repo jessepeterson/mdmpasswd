@@ -24,7 +24,12 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	x, err := plist.Marshal(p)
+	hashDict := struct {
+		SaltedSHA512PBKDF2 password.SaltedSHA512PBKDF2Dictionary `plist:"SALTED-SHA512-PBKDF2"`
+	}{
+		SaltedSHA512PBKDF2: p,
+	}
+	x, err := plist.MarshalIndent(hashDict, "  ")
 	if err != nil {
 		log.Fatal(err)
 	}
