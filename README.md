@@ -21,5 +21,17 @@ Example:
 $ go run mdmpasswd.go -password 'Hello, world!'
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0"><dict><key>entropy</key><data>rtXuhI91qDAj+ThxzBIpQrWFN2zaQb0O6t+iG3erAp4CyOAkeVrOLTtnsogYmHbBn1lYMyFJo/5dC6M5/dSre9CBBMirGsk7gIsnj/yVR/+5+rmaZxuUof7U+dWCDlBa0JR+MNCzVhmF8YJ+ogftX1K1WVS21TWMbPNFQonuCxQ=</data><key>iterations</key><integer>25327</integer><key>salt</key><data>eRBY3yyo9tG4s0P4WAveNXN2wx5J/q+K9gSKZWgV61w=</data></dict></plist>
+<plist version="1.0">
+  <dict>
+    <key>SALTED-SHA512-PBKDF2</key>
+    <dict>
+      <key>entropy</key>
+      <data>LRsP3y8L1kwX9JplSvYJTWaUsZLtrpa/7NamZBWEYONqtlt1yAWPC7kd5v1sjhdkPVzrvPESiIXbmBli3RWe5WmVvxKGjN7f3yl1yZVzUgasXrV1aZZ1TVnJBpOBqFJOPGxcDA3i5Krfts1dRgPjATgbi1nPHXk9I3IsE0a02us=</data>
+      <key>iterations</key>
+      <integer>34501</integer>
+      <key>salt</key>
+      <data>dCfDCfGDT+qitaiKelndzwbfxivLvGuLG66Of9ZzwxE=</data>
+    </dict>
+  </dict>
+</plist>
 ```
