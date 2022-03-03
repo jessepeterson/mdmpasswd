@@ -24,18 +24,18 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	hashDict := struct {
+	hash := struct {
 		SaltedSHA512PBKDF2 password.SaltedSHA512PBKDF2Dictionary `plist:"SALTED-SHA512-PBKDF2"`
 	}{
 		SaltedSHA512PBKDF2: p,
 	}
-	x, err := plist.MarshalIndent(hashDict, "  ")
+	plist, err := plist.MarshalIndent(hash, "  ")
 	if err != nil {
 		log.Fatal(err)
 	}
 	if *flB64 {
-		fmt.Print(base64.StdEncoding.EncodeToString(x))
+		fmt.Print(base64.StdEncoding.EncodeToString(plist))
 	} else {
-		fmt.Print(string(x))
+		fmt.Print(string(plist))
 	}
 }
