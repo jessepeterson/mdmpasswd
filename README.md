@@ -1,5 +1,8 @@
 # mdmpasswd: Apple MDM AccountConfiguration password generator
 
+> [!CAUTION]
+> `mdmpasswd` is deprecated and no longer maintained. [mdmutil](https://github.com/micromdm/mdmutil) has replaced it.
+
 The Apple MDM command `AccountConfiguration` requires a specific property list of hashed password to work. This tool generates that Plist. Apple has the format documented [here](https://developer.apple.com/documentation/devicemanagement/passwordhash?language=objc).
 
 ## Usage
